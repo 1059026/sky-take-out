@@ -68,6 +68,7 @@ public class EmployeeController {
      * @return
      */
     @PostMapping("/logout")
+    @ApiOperation(value="员工退出")
     public Result<String> logout() {
         return Result.success();
     }
@@ -119,4 +120,5 @@ public class EmployeeController {
         EmployeeDTO employee = employeeService.getEmployeeDetail(id);
         return Result.success(employee);
     }
+
 }
